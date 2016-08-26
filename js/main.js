@@ -18,19 +18,19 @@ app.run(['$rootScope','$http',function($rootScope,$http){
 
 
 //routing
-app.config(['$routeProvider','$locationProvider',function($routeProvider,$locationProvider){
+app.config(function($routeProvider,$locationProvider){
 	$routeProvider
 	  .when("/about", {
-	    templateUrl : "views/about.html",
+	    templateUrl : "/views/about.html",
 	    controller	: "aboutCtrl" 
 	  })
 	  .otherwise({
-	  	templateUrl	: "views/main.html",
+	  	templateUrl	: "/views/main.html",
 	  	controller  : "mainCtrl", 
 	  });
 
 	  $locationProvider.html5Mode(true);
-}]);
+});
 
 
 //controllers
